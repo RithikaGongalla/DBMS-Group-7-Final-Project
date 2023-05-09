@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "73db7a95-3c8c-40fa-a021-2fc2cf3b1a91",
+		"name": "store-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16001155"
+	},
+	"item": [
+		{
+			"name": "Sign-up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"userName\" : \"admin\",\n\"fullName\" : \"admin\" ,\n\"password\" : \"password\",\n\"dob\": \"2000-05-17\",\n\"emailId\" : \"abc@gmail.com\",\n\"address\" : \"24 st nj\",\n\"country\" :\"India\",\n\"mobileNo\" : \"9876543210\",\n\"role\": \"admin\"\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"userName\" : \"admin\",\n\"password\" : \"password\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/log-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"log-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add seller",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sellerName\": \"Anil\",\n    \"sellerIdentificationNumber\": \"12342123\",\n    \"emailId\": \"seller@abc.xom\",\n    \"phoneNumber\": \"3456789\",\n    \"address\": \"2342434\",\n    \"mainCategory\": \"mc\",\n    \"fbaSeller\": false,\n    \"sellerRating\": 4.2,\n    \"addedBy\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/add-seller",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"add-seller"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-sellers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"sellerName\": \"Anil\",\n        \"sellerIdentificationNumber\": \"1234212113\",\n        \"emailId\": \"seller@abc.xom\",\n        \"phoneNumber\": \"3456789\",\n        \"address\": \"2342434\",\n        \"mainCategory\": \"mc\",\n        \"fbaSeller\": false,\n        \"sellerRating\": 4.2,\n        \"addedBy\": 3\n    },\n    {\n        \"sellerName\": \"Anil\",\n        \"sellerIdentificationNumber\": \"12342123132\",\n        \"emailId\": \"seller@abc.xom\",\n        \"phoneNumber\": \"3456789\",\n        \"address\": \"2342434\",\n        \"mainCategory\": \"mc\",\n        \"fbaSeller\": false,\n        \"sellerRating\": 4.2,\n        \"addedBy\": 3\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/add-sellers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"add-sellers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"sellerId\": 4,\n        \"productName\": \"Soap\",\n        \"productDescription\": \"bathing soap\",\n        \"price\": 10,\n        \"addedBy\": 3\n    },\n    {\n        \"sellerId\": 3,\n        \"productName\": \"Soap\",\n        \"productDescription\": \"bathing soap\",\n        \"price\": 10,\n        \"addedBy\": 3\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/add-products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"add-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sellerId\": 1,\n    \"productName\": \"Soap\",\n    \"productDescription\": \"bathing soap\",\n    \"price\": 10,\n    \"addedBy\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/add-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"add-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/get-products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"get-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-sellers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/get-sellers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"get-sellers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order-item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 2,\n    \"productId\": 6,\n    \"orderStatus\": \"Delivered\",\n    \"orderedAt\": \"2022-03-18\",\n    \"productRating\": 4.2,\n    \"productReview\": \"Good\",\n    \"modeOfPayment\": \"Card\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/order-item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"order-item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-stock",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\" : 6,\n    \"stockLeft\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084//add-stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"",
+						"add-stock"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
